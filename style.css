@@ -1,0 +1,724 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:url("../assets/XWAA.gif");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:white;
+
+}
+
+.overlay{
+
+    min-height:100vh;
+
+    background:rgba(0,0,0,.70);
+
+    padding:35px 8%;
+
+}
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+font-size:32px;
+
+font-weight:700;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+color:white;
+
+text-shadow:0 0 15px rgba(88,101,242,.6);
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+position:relative;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-5px;
+
+width:0;
+
+height:2px;
+
+background:#5865F2;
+
+transition:.3s;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+nav a:hover{
+
+    color:#5865F2;
+
+}
+
+.active{
+
+    color:#5865F2;
+
+}
+
+.hero{
+
+    margin-top:80px;
+
+    text-align:center;
+
+}
+
+.hero-logo{
+
+    width:160px;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-size:70px;
+
+    letter-spacing:4px;
+
+}
+
+.hero p{
+
+    margin-top:15px;
+
+    font-size:20px;
+
+    color:#d1d5db;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:16px 45px;
+
+margin-top:35px;
+
+border-radius:40px;
+
+background:#5865F2;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+box-shadow:0 0 25px rgba(88,101,242,.35);
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 0 40px rgba(88,101,242,.6);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    background:#6e7cff;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:100px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card h2{
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+}
+
+.card span{
+
+    color:#cbd5e1;
+
+}
+
+footer{
+
+    margin-top:80px;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+}
+
+@media(max-width:900px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+header{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+}
+
+/* ROSTER PAGE */
+
+.roster{
+
+margin-top:60px;
+
+}
+
+.roster h1{
+
+text-align:center;
+
+font-size:45px;
+
+margin-bottom:10px;
+
+}
+
+.roster p{
+
+text-align:center;
+
+color:#cbd5e1;
+
+margin-bottom:30px;
+
+}
+
+#search{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+color:white;
+
+outline:none;
+
+margin-bottom:25px;
+
+font-size:16px;
+
+}
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+overflow:hidden;
+
+border-radius:15px;
+
+}
+
+thead{
+
+background:#5865F2;
+
+}
+
+th{
+
+padding:18px;
+
+text-align:left;
+
+}
+
+td{
+
+padding:16px;
+
+}
+
+tbody tr{
+
+background:rgba(255,255,255,.05);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+transition:.3s;
+
+}
+
+tbody tr:hover{
+
+background:rgba(255,255,255,.10);
+
+}
+
+tbody td{
+
+color:white;
+
+}
+
+.resp,
+.arch,
+.sup,
+.walk,
+.mw,
+.wanted{
+
+padding:7px 15px;
+
+border-radius:25px;
+
+font-size:12px;
+
+font-weight:600;
+
+}
+
+.resp{
+
+background:#dc2626;
+
+}
+
+.arch{
+
+background:#9333ea;
+
+}
+
+.sup{
+
+background:#2563eb;
+
+}
+
+.walk{
+
+background:#ea580c;
+
+}
+
+.mw{
+
+background:#facc15;
+
+color:black;
+
+}
+
+.wanted{
+
+background:#16a34a;
+
+}
+
+/* =======================
+   BANNERS PAGE
+======================= */
+
+.banner-page{
+
+margin-top:60px;
+
+text-align:center;
+
+}
+
+.banner-page h1{
+
+font-size:45px;
+
+margin-bottom:10px;
+
+}
+
+.banner-page p{
+
+color:#cbd5e1;
+
+margin-bottom:40px;
+
+}
+
+.banner-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:25px;
+
+}
+
+.banner-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:15px;
+
+border-radius:18px;
+
+transition:.3s;
+
+}
+
+.banner-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 25px rgba(88,101,242,.35);
+
+}
+
+.banner-card img{
+
+width:100%;
+
+border-radius:12px;
+
+display:block;
+
+}
+
+/* ===========================
+        UPDATES PAGE
+=========================== */
+
+.updates{
+
+margin-top:60px;
+
+text-align:center;
+
+}
+
+.updates h1{
+
+font-size:45px;
+
+margin-bottom:10px;
+
+}
+
+.updates p{
+
+color:#cbd5e1;
+
+margin-bottom:40px;
+
+}
+
+.timeline{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.update-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-left:5px solid #5865F2;
+
+padding:25px;
+
+border-radius:15px;
+
+text-align:left;
+
+transition:.3s;
+
+}
+
+.update-card:hover{
+
+transform:translateX(8px);
+
+}
+
+.date{
+
+color:#94a3b8;
+
+font-size:14px;
+
+margin-bottom:12px;
+
+}
+
+.update-card h2{
+
+margin-bottom:10px;
+
+}
+
+.update-card p{
+
+color:#d1d5db;
+
+margin:0;
+
+}
+
+/* ==========================
+Animations
+========================== */
+
+body{
+
+opacity:0;
+
+transition:.7s;
+
+}
+
+body.loaded{
+
+opacity:1;
+
+}
+
+*{
+
+scroll-behavior:smooth;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#5865F2;
+
+border-radius:20px;
+
+}
+
+/* Top Button */
+
+#topBtn{
+
+display:none;
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+border-radius:50%;
+
+background:#5865F2;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+#topBtn:hover{
+
+transform:translateY(-6px);
+
+background:#6b78ff;
+
+}
+
+/* Card Animation */
+
+.card,
+.banner-card,
+.update-card{
+
+animation:fade .8s ease;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
